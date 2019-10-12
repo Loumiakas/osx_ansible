@@ -1,0 +1,52 @@
+---
+- hosts: localhost
+  vars:
+    git_repository: https://github.com/Loumiakas/dotfiles
+   
+    dest: ~/.dotfiles
+
+    plugin_host: https://github.com/
+
+    dotfiles:
+     - config
+     - gdbinit
+     - gitconfig
+     - gitignore
+     - tmux-macos.conf
+     - tmux.conf
+     - vim
+     - vimrc
+     - zshrc
+     - zsh_plugins
+
+    plugins: 
+     - olivierverdier/zsh-git-prompt
+     - zsh-users/zsh-syntax-highlighting
+     - zsh-users/zsh-completions
+     - zsh-users/zsh-autosuggestions
+
+  tasks: 
+   - name: Cloning dotfiles
+     git:
+       repo: "{{ git_repository }}"
+       dest: "{{ dest }}"
+
+   - name: Removing old files
+     file:
+       path: "~/.{{ item }}"
+       state: absent
+     with_items: "{{ dotfiles }}"
+
+   - name: Sybolic linking files
+     file:
+       src: "{{ dest }}/{{ item }}"
+       dest: "~/.{{ item }}"
+       state: link
+     with_items: "{{ dotfiles }}"
+
+   - name: Cloning addons
+     git:
+       repo: "{{ plugin_host }}{{ item }}"
+       dest: "~/.zsh_plugins/{{ item | regex_replace('^.*\/', '') }}"
+     with_items: "{{ plugins }}"
+...

@@ -1,0 +1,38 @@
+---
+- hosts: localhost
+  vars:
+    git_repository: https://github.com/Loumiakas/dotfiles
+   
+    dest: ~/.dotfiles
+
+    plugin_host: https://github.com/
+
+    dotfiles:
+     - config
+     - gdbinit
+     - gitconfig
+     - gitignore
+     - tmux-macos.conf
+     - tmux.conf
+     - vim
+     - vimrc
+     - zshrc
+     - zsh_plugins
+
+    plugins: 
+     - olivierverdier/zsh-git-prompt
+     - zsh-users/zsh-syntax-highlighting
+     - zsh-users/zsh-completions
+     - zsh-users/zsh-autosuggestions
+
+  tasks: 
+   - name: Downloading gohufont
+     get_url:
+       url: http://font.gohu.org/gohufont.dfont
+       dest: gohufont.dfont
+
+   - name: Cloning repository with keys
+     git:
+       repo: "{{ plugin_host }}{{ item }}"
+       dest: keys
+...

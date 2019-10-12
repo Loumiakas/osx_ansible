@@ -1,0 +1,115 @@
+---
+#
+# Main logic goes here 
+#
+- hosts: localhost
+  vars:
+    dock_items:
+     - /Applications/Google Chrome.app/
+     - /System/Applications/Mail.app/
+     - /Applications/Spotify.app/
+     - /Applications/Blender.app/
+     - /Applications/GIMP-2.10.app/
+     - /Applications/iTerm.app/
+     - /Applications/Dash.app/
+     - /Applications/IntelliJ IDEA.app/
+     - /Applications/Wireshark.app/
+     - /Applications/Burp Suite Community Edition.app/
+     - /Applications/CubicSDR.app/
+     - /Applications/Gqrx.app/
+     - /Applications/Skype.app/
+
+
+  tasks: 
+   - osx_defaults:
+      domain: com.apple.AppleMultitouchTrackpad
+      key: Clicking
+      type: bool
+      value: true
+
+   - osx_defaults:
+      domain: "Apple Global Domain"
+      key: com.apple.swipescrolldirection
+      type: bool
+      value: false
+
+   - osx_defaults:
+      domain: "Apple Global Domain"
+      key: NsTableViewDefaultSizeMode
+      type: int
+      value: 1
+
+   - osx_defaults:
+      domain: "Apple Global Domain"
+      key: NSNavRecentPlacesLimit
+      type: int
+      value: 0
+      state: present
+
+   - osx_defaults:
+      domain: com.apple.systemuiserver
+      key: "NSStatusItem Visible com.apple.menuextra.clock"
+      type: bool
+      value: false
+
+   - osx_defaults:
+      domain: com.apple.systemuiserver
+      key: "NSStatusItem Visible com.apple.menuextra.battery"
+      type: bool
+      value: false
+
+   - osx_defaults:
+      domain: com.apple.systemuiserver
+      key: "NSStatusItem Preferred Position com.apple.menuextra.clock"
+      state: absent
+
+   - osx_defaults:
+      domain: com.apple.assistant.support
+      key: "Assistant Enabled"
+      type: bool
+      value: false
+
+   - osx_defaults:
+      domain: com.apple.Siri
+      key: StatusMenuVisible
+      type: bool
+      value: false
+
+   - osx_defaults:
+      domain: com.apple.finder
+      key: NewWindowTargetPath
+      type: string
+      value: file:///Users/loumiakas/Desktop/
+
+   - osx_defaults:
+      domain: com.apple.dock
+      key: minimize-to-application
+      type: bool
+      value: true
+
+   - osx_defaults:
+      domain: com.apple.dock
+      host: currentHost
+      key: show-recents
+      type: bool
+      value: false
+
+   - name: Removing all Dock items
+     shell: >
+       dockutil --remove all
+
+   - name: Adding Dock items
+     shell: >
+       dockutil --add "{{ item }}"
+     with_items: "{{ dock_items }}"
+
+   - name: Adding Downloads directory
+     shell: |
+       dockutil --add '~/Downloads' --label 'Downloads' --view grid --display folder
+       dockutil --add smb://192.168.0.100/Elements --label 'NAS' --after Downloads
+
+   - name: Adding spacers
+     shell: |
+       dockutil --add '' --type spacer --section apps --after Spotify
+       dockutil --add '' --type spacer --section apps --after Gqrx
+...

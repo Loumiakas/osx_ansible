@@ -1,0 +1,59 @@
+---
+- hosts: localhost
+  vars:
+    homebrew_taps:
+      - homebrew/cask-fonts
+      - homebrew/cask-drivers
+    homebrew_installed_packages:
+      - binwalk
+      - cscope
+      - ctags
+      - dockutil
+      - reattach-to-user-namespace
+      - tmux
+      - vim
+      - youtube-dl
+      - zsh
+    homebrew_cask_apps:
+      - bettertouchtool
+      - blender
+      - burp-suite
+      - cubicsdr
+      - dash
+      - firefox
+      - font-fira-code
+      - font-iosevka-nerd-font
+      - font-profont-nerd-font
+      - font-proggyclean-nerd-font
+      - font-source-code-pro
+      - font-gohu-nerd-font
+      - font-gohu-nerd-font-mono
+      - freac
+      - ghidra
+      - gimp
+      - google-backup-and-sync
+      - google-chrome
+      - gqrx
+      - intellij-idea
+      - istat-menus
+      - iterm2
+      - keepassxc
+      - macvim
+      - mp3tag
+      - oracle-jdk
+      - osxfuse
+      - outguess
+      - paragon-ntfs
+      - skype
+      - spotify
+      - steam
+      - teamviewer
+      - vagrant
+      - virtualbox
+      - virtualbox-extension-pack
+      - visual-studio-code
+      - vlc
+      - wch-ch34x-usb-serial-driver
+      - wireshark
+  roles:
+    - geerlingguy.homebrew
