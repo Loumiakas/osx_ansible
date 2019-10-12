@@ -9,6 +9,7 @@
       - cscope
       - ctags
       - dockutil
+      - fzf
       - reattach-to-user-namespace
       - tmux
       - vim
