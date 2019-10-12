@@ -7,7 +7,9 @@ if [ ! -f /usr/local/bin/brew  ]; then
 fi
 
 brew install ansible
+ansible-galaxy install geerlingguy.homebrew
 
 ansible-playbook --ask-become-pass homebrew.yml
 ansible-playbook user_settings.yml
 ansible-playbook dotfiles.yml
+ansible-playbook etc.yml

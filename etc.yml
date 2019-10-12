@@ -29,10 +29,5 @@
    - name: Downloading gohufont
      get_url:
        url: http://font.gohu.org/gohufont.dfont
-       dest: gohufont.dfont
-
-   - name: Cloning repository with keys
-     git:
-       repo: "{{ plugin_host }}{{ item }}"
-       dest: keys
+       dest: ~/Desktop/gohufont.dfont
 ...

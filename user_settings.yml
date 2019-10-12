@@ -23,6 +23,7 @@
   tasks: 
    - osx_defaults:
       domain: com.apple.AppleMultitouchTrackpad
+      host: currentHost
       key: Clicking
       type: bool
       value: true
