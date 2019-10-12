@@ -4,6 +4,13 @@
 <dict>
 	<key>build</key>
 	<string>1113</string>
+	<key>license</key>
+	<dict>
+		<key>email</key>
+		<string>loumiakas1@gmail.com</string>
+		<key>serial</key>
+		<string>GAXAE-F9ASW-9RPPM-TES6J-LDW68-H2YPF-EGVFR-KCMU5-A9KQB-FWE9P-LPLJQ-4R3YQ-WDDZS-PLAG4-QPBA7-CC</string>
+	</dict>
 	<key>preferences</key>
 	<dict>
 		<key>Battery_MenubarMode</key>
@@ -43,8 +50,6 @@
 				<true/>
 				<key>key</key>
 				<string>16E42931-4A78-4F14-8BFE-11BD73D922E6</string>
-				<key>name</key>
-				<string>Mac OSX</string>
 			</dict>
 		</array>
 		<key>Disks_MenubarMode</key>
