@@ -17,10 +17,11 @@
       - zsh
     homebrew_cask_apps:
       - bettertouchtool
+      - beyond-compare
       - blender
       - burp-suite
       - cubicsdr
-      - dash
+      - dash4
       - firefox
       - font-fira-code
       - font-iosevka-nerd-font
