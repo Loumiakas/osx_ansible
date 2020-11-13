@@ -4,6 +4,7 @@
     homebrew_taps:
       - homebrew/cask-fonts
       - homebrew/cask-drivers
+      - AdoptOpenJDK/openjdk
     homebrew_installed_packages:
       - binwalk
       - cscope
@@ -21,6 +22,7 @@
       - youtube-dl
       - zsh
     homebrew_cask_apps:
+      - adoptopenjdk9
       - bettertouchtool
       - beyond-compare
       - blender
