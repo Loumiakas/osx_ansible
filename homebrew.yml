@@ -7,14 +7,16 @@
     homebrew_installed_packages:
       - binwalk
       - cscope
-      - dockutil
       - ctags
       - dockutil
+      - esptool
       - gradle
+      - hackrf
       - fzf
       - reattach-to-user-namespace
       - tmux
       - vim
+      - ubertooth
       - youtube-dl
       - zsh
     homebrew_cask_apps:
@@ -34,11 +36,14 @@
       - google-backup-and-sync
       - google-chrome
       - gqrx
+      - iina
       - intellij-idea
       - istat-menus
       - iterm2
       - keepassxc
       - macvim
+      - nordic-nrf-command-line-tools
+      - nordic-nrf-connect
       - osxfuse
       - outguess
       - paragon-ntfs
@@ -48,7 +53,6 @@
       - teamviewer
       - vagrant
       - visual-studio-code
-      - vlc
       - wch-ch34x-usb-serial-driver
       - wireshark
   roles:
