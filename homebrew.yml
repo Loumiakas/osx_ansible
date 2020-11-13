@@ -17,6 +17,7 @@
       - tmux
       - vim
       - ubertooth
+      - wget
       - youtube-dl
       - zsh
     homebrew_cask_apps:
