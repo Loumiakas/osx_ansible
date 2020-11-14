@@ -19,3 +19,15 @@ if [ ! -f ~/Desktop/ideaIU-2019.1.4.dmg ]; then
 	wget https://download.jetbrains.com/idea/ideaIU-2019.1.4.dmg
 	cd -
 fi
+
+
+cd ~/Desktop
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+/usr/bin/python get-pip.py
+/usr/bin/python3 get-pip.py
+/usr/bin/python3 -m pip install pyserial --pre
+/usr/bin/python -m pip install pyserial --pre
+cd - 
+
+
+
