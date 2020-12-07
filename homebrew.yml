@@ -6,6 +6,7 @@
       - homebrew/cask-drivers
       - AdoptOpenJDK/openjdk
     homebrew_installed_packages:
+      - bat
       - binwalk
       - cscope
       - ctags
@@ -15,6 +16,7 @@
       - hackrf
       - fzf
       - reattach-to-user-namespace
+      - rg
       - tmux
       - vim
       - ubertooth
