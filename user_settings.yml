@@ -5,18 +5,17 @@
 - hosts: localhost
   vars:
     dock_items:
-     - /Applications/Google Chrome.app/
+     - /Applications/Firefox.app/
      - /System/Applications/Mail.app/
      - /Applications/Spotify.app/
-     - /Applications/Blender.app/
-     - /Applications/GIMP-2.10.app/
      - /Applications/iTerm.app/
+     - /Applications/GIMP-2.10.app/
      - /Applications/Dash.app/
-     - /Applications/IntelliJ IDEA.app/
      - /Applications/Wireshark.app/
+     - /Applications/IntelliJ IDEA.app/
      - /Applications/CubicSDR.app/
      - /Applications/Gqrx.app/
-     - /Applications/Skype.app/
+     - /Applications/ProtonVPN.app/
 
 
   tasks: 
@@ -106,7 +105,7 @@
    - name: Adding Downloads directory
      shell: |
        dockutil --add '~/Downloads' --label 'Downloads' --view grid --display folder
-       dockutil --add smb://192.168.0.100/Elements --label 'NAS' --after Downloads
+       dockutil --add smb://readyshare --label 'NAS' --after Downloads
 
    - name: Adding spacers
      shell: |

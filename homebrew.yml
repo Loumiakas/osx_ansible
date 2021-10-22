@@ -6,23 +6,33 @@
       - homebrew/cask-drivers
       - AdoptOpenJDK/openjdk
     homebrew_installed_packages:
+      - arduino-cli
       - bat
       - binwalk
       - cscope
       - ctags
+      - docker
       - dockutil
       - esptool
+      - flashrom
+      - fzf
+      - gnuplot
       - gradle
       - hackrf
-      - fzf
+      - hexyl
+      - ipython
+      - minipro
       - reattach-to-user-namespace
       - rg
+      - stlink
+      - stm32flash
       - tmux
-      - vim
       - ubertooth
+      - vim
       - wget
       - youtube-dl
       - zsh
+      - zsh-git-prompt
     homebrew_cask_apps:
       - adoptopenjdk8
       - bettertouchtool
@@ -31,33 +41,40 @@
       - cubicsdr
       - dash4
       - firefox
+      - font-cascadia-code
+      - font-dejavu
+      - font-dejavu-sans-mono-nerd-font
       - font-fira-code
       - font-iosevka-nerd-font
+      - font-menlo-for-powerline
+      - font-mononoki
       - font-profont-nerd-font
       - font-source-code-pro
+      - font-terminus
+      - font-ubuntu-mono-nerd-font
       - freac
       - ghidra
       - gimp
       - google-backup-and-sync
-      - google-chrome
       - gqrx
       - iina
       - istat-menus
       - iterm2
       - keepassxc
+      - little-snitch
       - macvim
       - nordic-nrf-command-line-tools
       - nordic-nrf-connect
       - osxfuse
       - outguess
-      - paragon-ntfs
+      - protonvpn
+      - segger-jlink
       - skype
       - spotify
       - steam
       - teamviewer
       - vagrant
       - visual-studio-code
-      - wch-ch34x-usb-serial-driver
       - wireshark
   roles:
     - geerlingguy.homebrew
