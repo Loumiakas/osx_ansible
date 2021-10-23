@@ -35,5 +35,6 @@ mv  extcap  ~/.config/wireshark/
 
 
 # pip packages
-pip3 install rfcat
 pip3 install ezntfs
+pip3 install rfcat
+pip3 install tmuxp
