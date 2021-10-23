@@ -7,7 +7,7 @@ if [ ! -f /usr/local/bin/brew  ]; then
 fi
 
 brew install ansible
-ansible-galaxy install geerlingguy.homebrew
+ansible-galaxy collection install geerlingguy.mac
 
 ansible-playbook --ask-become-pass homebrew.yml
 ansible-playbook user_settings.yml
@@ -34,3 +34,6 @@ mv  Profile_nRF_Sniffer_Bluetooth_LE ~/.config/wireshark/profiles
 mv  extcap  ~/.config/wireshark/
 
 
+# pip packages
+pip3 install rfcat
+pip3 install ezntfs
