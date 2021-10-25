@@ -48,6 +48,7 @@
       - blender
       - cubicsdr
       - dash4
+      - dozer
       - firefox
       - font-cascadia-code
       - font-dejavu
@@ -83,6 +84,7 @@
       - teamviewer
       - vagrant
       - visual-studio-code
+      - qbittorrent
       - wireshark
 
   roles:
