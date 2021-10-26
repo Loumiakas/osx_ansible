@@ -48,6 +48,7 @@
       - blender
       - cubicsdr
       - dash4
+      - docker
       - dozer
       - firefox
       - font-cascadia-code
@@ -83,6 +84,8 @@
       - steam
       - teamviewer
       - vagrant
+      - virtualbox
+      - virtualbox-extension-pack
       - visual-studio-code
       - qbittorrent
       - wireshark
