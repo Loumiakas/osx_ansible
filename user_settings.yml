@@ -105,7 +105,7 @@
    - name: Adding Downloads directory
      shell: |
        dockutil --add '~/Downloads' --label 'Downloads' --view grid --display folder
-       dockutil --add smb://readyshare --label 'NAS' --after Downloads
+       dockutil --add smb://gateway.localnet --label 'NAS' --after Downloads
 
    - name: Adding spacers
      shell: |
