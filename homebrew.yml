@@ -64,22 +64,20 @@
       - freac
       - ghidra
       - gimp
-      - google-drive
       - gqrx
       - iina
       - istat-menus
       - iterm2
       - keepassxc
-      - little-snitch
       - macfuse
       - macvim
       - nordic-nrf-command-line-tools
       - nordic-nrf-connect
       - osxfuse
       - outguess
-      - protonvpn
+      - nordvpn
       - segger-jlink
-      - skype
+      - syncthing
       - spotify
       - steam
       - teamviewer
