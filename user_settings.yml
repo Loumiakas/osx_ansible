@@ -5,18 +5,18 @@
 - hosts: localhost
   vars:
     dock_items:
-     - /Applications/Firefox.app/
      - /System/Applications/Mail.app/
      - /Applications/Spotify.app/
+     - /Applications/Firefox.app/
      - /Applications/iTerm.app/
-     - /Applications/GIMP-2.10.app/
      - /Applications/Dash.app/
      - /Applications/Wireshark.app/
      - /Applications/IntelliJ IDEA.app/
      - /Applications/CubicSDR.app/
      - /Applications/Gqrx.app/
-     - /Applications/ProtonVPN.app/
-
+     - /Applications/GIMP-2.10.app/
+     - /Applications/NordVPN.app/
+     - /Applications/Visual Studio Code.app/
 
   tasks: 
    - osx_defaults:
@@ -109,6 +109,6 @@
 
    - name: Adding spacers
      shell: |
-       dockutil --add '' --type spacer --section apps --after Spotify
-       dockutil --add '' --type spacer --section apps --after Gqrx
+       dockutil --add '' --type spacer --section apps --after Firefox
+       dockutil --add '' --type spacer --section apps --after NordVPN
 ...
